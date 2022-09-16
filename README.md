@@ -54,6 +54,6 @@ server_name = EUWDABCDEFWAP01
 ```
 
 ## Destroying resource
-> When requesting `terraform destroy` it will remove from Meaningful every name generated with the same information; i.e. if you requested a name for several WebApps for Deployment ID ABCDEF, when asking to destroy a specific target with a name generated, it will destroy *every* name for WebApps with ID ABCDEF.
+When requesting `terraform destroy` it will remove from Meaningful every name generated with the same information; i.e. if you requested a name for several WebApps for Deployment ID ABCDEF, when asking to destroy a specific target with a name generated, it will destroy *every* name for WebApps with ID ABCDEF.
 
-> This is a Meaningful API limitation for deleting names.
+This is a Meaningful API limitation for deleting names.
