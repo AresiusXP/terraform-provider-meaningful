@@ -7,10 +7,10 @@ Terraform provider to get a name for Azure components following the CT standard.
 * [Terraform](https://www.terraform.io/downloads.html) 0.11.x
 * [Go](https://golang.org/doc/install) 1.10.x
 
-##Installing the provider
+## Installing the provider
 Follow the instructions to [install it as a plugin](https://www.terraform.io/docs/plugins/basics.html#installing-a-plugin). After placing it into your plugins directory, run `terraform init` to initialize it.
 
-##Usage
+## Usage
 Provider takes the following parameters, and they're all **required**.
 
 * `tenant_id`: Tenant ID to generate URL in order to request authorization token.
