@@ -1,3 +1,5 @@
+> NOTE: This provider was developed for a specific internal API in 2017. This is deprecated because of changes in the API endpoints, and Terraform version being too old. However, it will provide examples on how to implement API calls with a custom Terraform Provider.
+
 #Meaningful provider for Terraform
 Terraform provider to get a name for Azure components following the CT standard. Provider queries Meaningful API and outputs result as string to be used.
 
@@ -30,7 +32,7 @@ resource "meaningful_resource_name" "server_name" {
     client_secret = "clientPassword"
     meaningful_env = "QA"
     resource_type = "Web App"
-    deployment_id = "SMXOPX"
+    deployment_id = "ABCDEF"
     location = "westeurope"
     environment = "Development"
 }
@@ -48,18 +50,10 @@ Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
 
 Outputs:
 
-server_name = EUWDSMXOPXWAP01
+server_name = EUWDABCDEFWAP01
 ```
 
 ## Destroying resource
-> When requesting `terraform destroy` it will remove from Meaningful every name generated with the same information; i.e. if you requested a name for several WebApps for Deployment ID ADVSMX, when asking to destroy a specific target with a name generated, it will destroy *every* name for WebApps with ID ADVSMX.
+> When requesting `terraform destroy` it will remove from Meaningful every name generated with the same information; i.e. if you requested a name for several WebApps for Deployment ID ABCDEF, when asking to destroy a specific target with a name generated, it will destroy *every* name for WebApps with ID ABCDEF.
 
 > This is a Meaningful API limitation for deleting names.
-
-##Reference documentation
-* [Meaningful documentation](https://eysbp.visualstudio.com/EY%20-%20Platform%20Engineering/_wiki/wikis/CorePlatformWiki?wikiVersion=GBmaster&pagePath=%2FPlatform%20APIs%20and%20Integrations%2FMeaningful)
-
-
-##Contact
-Developed by Patricio Danos
-[patricio.danos@gds.ey.com](mailto:patricio.danos@gds.ey.com)
