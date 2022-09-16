@@ -1,9 +1,9 @@
 > NOTE: This provider was developed for a specific internal API in 2017. This is deprecated because of changes in the API endpoints, and Terraform version being too old. However, it will provide examples on how to implement API calls with a custom Terraform Provider.
 
-#Meaningful provider for Terraform
+# Meaningful provider for Terraform
 Terraform provider to get a name for Azure components following the CT standard. Provider queries Meaningful API and outputs result as string to be used.
 
-##Requirements
+## Requirements
 * [Terraform](https://www.terraform.io/downloads.html) 0.11.x
 * [Go](https://golang.org/doc/install) 1.10.x
 
@@ -23,9 +23,9 @@ Provider takes the following parameters, and they're all **required**.
 * `environment`: Environment type for deployment. Please refer to Meaningful documentation for valid options.
 
 
-##Example
+## Example
 
-```
+```ruby
 resource "meaningful_resource_name" "server_name" {
     tenant_id = "766adece-df5e-4735-a192-d80fc644fa8a"
     client_id = "92d60cfa-83c7-4c85-8c42-1cb94720970b"
